@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Digital Marketing & PR Services | IPM Digital Marketing{% endblock %}
+{% block meta_description %}
+Explore IPM’s digital marketing and PR services including SEO, social media marketing, content creation, online advertising, and brand promotion.
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/works.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="work-large">
+  <h2>Where Strategy Meets Execution — Real Work. Real Results.</h2>
+  <p>
+    Every project we deliver is built with purpose — not just to look good, but to perform, convert, and grow your brand. From digital marketing campaigns to PR executions and creative production, our work reflects strategy, consistency, and measurable impact.
+  </p>
+  <p>
+    At IPM Digital Marketing Solutions, our works showcase a blend of data-driven digital marketing, impactful PR works, high-quality camera and editing services, and customized creative solutions designed for modern businesses. We collaborate closely with brands
+     to understand their goals, target audience, and market position, ensuring every campaign, visual, and strategy aligns with real business objectives. Whether it’s increasing online visibility, building brand credibility, generating qualified 
+     leads, or creating compelling visual content, our portfolio reflects results-focused execution across platforms. Each project is carefully planned, creatively executed, and optimized for performance — because we believe great work isn’t just seen, it delivers value.
+  </p>
+</section>
+<section class="work-small">
+<h2>Real work. Real impact.</h2>
+<p>From digital marketing and PR to creative visuals and campaigns, every project we deliver is focused on performance, clarity, and growth. Our work reflects strategy, creativity, and results that help brands stand out and scale.
+</p>
+</section>
+
+<div class="works">
+  <!-- Card 1 -->
+  <div class="card">
+    <button class="arrow left">&#10094;</button>
+    <div class="slider">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 1">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 2">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 3">
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="slider">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 4">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 5">
+      <img src="{% static 'images/WORK.PNG' %}" alt="Post 6">
+    </div>
+  </div>
+</div>
+
+<div class="website">
+  <h2> Websites We’ve Built</h2>
+  <p>Modern, high-performance websites crafted for visibility, usability, and growth.</p>
+    <div class="card">
+      <div class="slider">
+        <img src="{% static 'images/WORK.PNG' %}" alt="Post 4">
+        <img src="{% static 'images/WORK.PNG' %}" alt="Post 5">
+        <img src="{% static 'images/WORK.PNG' %}" alt="Post 6">
+      </div>
+  </div>
+</div>
+<script src="{% static 'js/work.js' %}"></script>
+
+{% endblock %}

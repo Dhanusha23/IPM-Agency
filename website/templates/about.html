@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | IPM Digital Marketing & PR Agency{% endblock %}
+{% block meta_description %}
+Learn about IPM Digital Marketing & PR Agency, a results-driven digital marketing company delivering SEO, branding, and PR solutions since 2020.
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- SECTION 1 -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-text slide-left">
+      <h2>ABOUT US</h2>
+      <p>
+IPM Digital Marketing & PR Agency is a full-service digital marketing and public relations agency helping businesses improve their online presence, brand visibility, and customer engagement. Founded in 2020, we provide result-oriented digital marketing services including SEO, social media marketing, content creation, online advertising, and strategic PR solutions designed to drive consistent business growth.
+      </p>
+    </div>
+
+    <div class="about-image slide-right">
+      <img src="{% static 'images/ABOUT1.PNG' %}" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="about-section">
+  <div class="about-grid reverse">
+    <div class="about-image slide-left">
+      <img src="{% static 'images/ABOUT2.PNG' %}" alt="">
+    </div>
+
+    <div class="about-text slide-right">
+      <p>
+We focus on delivering customized digital marketing and PR strategies that align with our clients’ goals and target audience. By combining innovative marketing techniques, creative storytelling, and data-driven insights, IPM helps brands increase reach, build credibility, and generate measurable results. Our commitment to transparency, performance, and long-term partnerships makes us a trusted digital marketing agency for businesses looking to grow in the digital space.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonial-track">
+
+    <!-- SET 1 -->
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <!-- SET 2 (DUPLICATE EXACT SAME CARDS) -->
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/PEOPLE.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAMS -->
+
+<section class="team">
+  <h2 class="team-title">LOREAM IPSUM</h2>
+
+  <p class="team-desc">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="{% static 'images/PEOPLE.png' %}" alt="">
+      <span>LOREAM IPSUM</span>
+    </div>
+
+    <div class="team-member">
+      <img src="{% static 'images/PEOPLE.png' %}" alt="">
+      <span>LOREAM IPSUM</span>
+    </div>
+
+    <div class="team-member">
+      <img src="{% static 'images/PEOPLE.png' %}" alt="">
+      <span>LOREAM IPSUM</span>
+    </div>
+
+    <div class="team-member">
+      <img src="{% static 'images/PEOPLE.png' %}" alt="">
+      <span>LOREAM IPSUM</span>
+    </div>
+
+    <div class="team-member">
+      <img src="{% static 'images/PEOPLE.png' %}" alt="">
+      <span>LOREAM IPSUM</span>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

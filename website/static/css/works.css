@@ -1,0 +1,190 @@
+
+/* =======================
+   WORKS
+======================= */
+.works {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+  flex-direction: column;
+  background:var(--black-primary);
+}
+
+/* content */
+.work-large  {
+  display: block;
+  background:var(--black-primary);
+  color:var(--white-primary);
+  text-align: center;
+  padding: 30px;
+
+}
+.work-large p{
+  padding: 10px 60px 5px 60px;
+}
+.work-small {
+  display: none;
+}
+
+/* Card */
+.works .card {
+  width: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  padding: 10px;
+}
+
+/* Slider container */
+.slider {
+  display: flex;
+  width: fit-content;
+  animation: scroll 22s linear infinite;
+}
+.card:hover .slider {
+  animation-play-state: paused;
+}
+
+
+/* Images */
+.slider img {
+  width: clamp(180px, 60vw, 250px);
+  height: 300px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 12px;
+}
+
+/* =======================
+   CARD 1 – INSTAGRAM POSTS (1:1)
+======================= */
+.works .card:nth-child(1) .slider img {
+  width: 240px;
+  border-radius: 0px;
+  padding-left: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+/* =======================
+   CARD 2 – REELS (9:16)
+======================= */
+.works .card:nth-child(2) .slider img {
+  width: 200px;
+  border-radius: 0px;
+  aspect-ratio: 9 / 16;
+}
+
+/* =======================
+   WEBSITES – 16:9
+======================= */
+.website{
+  background: var(--black-primary);
+  color: var(--white-primary);
+  padding-bottom: 50px;
+}
+.website .card{
+  padding: 10px;
+  background: var(--glass-white);
+}
+.slider img {
+  width: 420px;
+  border-radius: 0px;
+  aspect-ratio: 16 / 9;
+  background: var(--black-primary);
+}
+.website h2 {
+  padding: 30px;
+  text-align: center;
+}
+.website p{
+  padding: 10px;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* hide arrows on desktop */
+.arrow {
+  display: none;
+}
+
+
+
+
+
+/* =======================
+   TABLET RESPONSIVE
+======================= */
+
+
+
+
+
+
+
+
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+
+  .work-large {
+    display: none;
+  }
+
+  .work-small {
+    display: block;
+  }
+    .work-small h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .work-small p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+    .slider {
+    animation: none;           /*  stop auto scroll */
+    transform: translateX(0);  
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+.arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: #FFD700;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+}

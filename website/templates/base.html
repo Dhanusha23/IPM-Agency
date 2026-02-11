@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}IPM Agency{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Digital marketing and PR agency helping brands grow online.{% endblock %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+<header class="header">
+
+  <!-- TOP SOCIAL BAR -->
+  <div class="top-bar">
+    <div class="top-left">
+      <span ><i class="fa-solid fa-phone"></i>+91 8891428924</span>
+    </div>
+
+    <div class="top-socials">
+      <a href="https://www.instagram.com/ipm_the_digital_djinn" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/9747563572" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61567521715282" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN NAVBAR -->
+<nav class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">IPM Agency</h2>
+  </div>
+
+  <div class="menu-toggle"id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li><a href="{% url 'works' %}">Works</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+
+  </ul>
+</nav>
+
+</header>
+
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+    <div class="main-footer">
+
+        <div class="footer-about">
+        <p>
+            IPM Digital Marketing & PR Agency is a results-driven digital marketing company based in Kerala, helping businesses grow online through SEO, social media marketing, content creation, branding, and public relations.
+        </p>
+        </div>
+
+        <div class="footer-links">
+        <h3>Go To</h3>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'works' %}">Works</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-address">
+        <h3>Address</h3>
+        Ambalapuzha,Purakkad<br>Kaloor,Penta tower<br>Kerala – 688561,682017<br>
+        infinitypotentialmedia@gmail.com<br>
+        <strong>+91 85899 58924</strong>
+        </div>
+
+        <div class="footer-services">
+        <h3>Services</h3>
+        <ul>
+            <li>SEO Services</li>
+            <li>Social Media Marketing</li>
+            <li>Content Marketing</li>
+            <li>Branding</li>
+            <li>Public Relations</li>
+        </ul>
+        </div>
+
+    </div>
+<div class="copyright">
+  <div class="copyright-text">
+    © 2026 IPM Digital Marketing. All rights reserved.
+  </div>
+
+  <div class="copyright-contact">
+    <a href="tel:+918891428924" class="phone">
+      <i class="fa-solid fa-phone"></i> +91 88914 28924
+    </a>
+
+    <a href="https://www.instagram.com/ipm_the_digital_djinn" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/9747563572" target="_blank" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61567521715282" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </div>
+</div>
+
+    </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+
+    // toggle on click
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+
+    // close menu on scroll
+    window.addEventListener("scroll", function () {
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+      }
+    });
+  });
+</script>
+</script>
+</body>
+</html>

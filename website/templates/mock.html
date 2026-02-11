@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Center Pixel Hover</title>
+
+<style>
+
+.testimonials {
+  padding: 20px;
+  background: #111;
+}
+.testimonial-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+}
+.testimonial-card {
+  width: 280px;
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.stars {
+  margin-top: 10px;
+  color: #FFD700;
+  font-size: 18px;
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<section class="testimonials">
+  <div class="testimonial-track">
+
+    <!-- SET 1 -->
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <!-- SET 2 (DUPLICATE EXACT SAME CARDS) -->
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="{% static 'images/placeholder.png' %}">
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="stars">★ ★ ★ ☆</div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

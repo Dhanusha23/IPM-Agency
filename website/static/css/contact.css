@@ -1,0 +1,121 @@
+
+.contact {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: var(--black-primary);
+    color: var(--white-primary);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+}
+.contact-info p , .contact h3{
+  line-height: 1.6;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: var(--white-primary);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background-color:var(--white-primary);
+    color:var(--black-primary);
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: var(--yellow);
+    color: var(--black-primary);
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form .cntsocials {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0 10px;
+  margin-top: 10px;
+}
+
+.contact-form .cntsocials a {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--yellow-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow-primary);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form .cntsocials a:hover {
+  background: var(--yellow-primary);
+  color: var(--black-primary);
+  transform: translateY(-3px);
+}
+
+
+
+
+
+@media (max-width: 768px){
+     .contact {
+    padding: 40px 10px;
+    text-align: center;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info p {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .map iframe {
+    height: 220px;
+    border-radius: 12px;
+  }
+ 
+}
