@@ -59,11 +59,13 @@ Explore IPM’s digital marketing and PR services including SEO, social media ma
   <h2>Instagram Posts</h2>
   <div class="carousel">
     <button class="btn prev">‹</button>
-    <div class="track">
-      <div class="slide square"><img src="https://images.unsplash.com/photo-1520975916090-3105956dac38"></div>
-      <div class="slide square"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba"></div>
-      <div class="slide square"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"></div>
-    </div>
+      <div class="track">
+        <div class="slide square">
+          {% for post in works_page.instagram_posts.all %}
+            <img src="{{ post.image.url }}" alt="{{ post.caption }}">
+          {% endfor %}
+        </div>
+      </div>
     <button class="btn next">›</button>
   </div>
 </section>
@@ -72,13 +74,15 @@ Explore IPM’s digital marketing and PR services including SEO, social media ma
 <section class="section">
   <h2>Reels & Videos</h2>
   <div class="carousel">
-    <button class="btn prev">‹</button>
-    <div class="track">
-      <div class="slide vertical"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"></div>
-      <div class="slide vertical"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f"></div>
-      <div class="slide vertical"><img src="https://images.unsplash.com/photo-1520974735194-2f6f8a0c33aa"></div>
-    </div>
-    <button class="btn next">›</button>
+    {% for post in works_page.reels.all %}
+        <button class="btn prev">‹</button>
+        <div class="track">
+            <video autoplay muted loop playsinline controls>
+                <source src="{{ reel.video.url }}" type="video/mp4">
+            </video>
+        </div>
+        <button class="btn next">›</button>
+    {% endfor %}
   </div>
 </section>
 
@@ -86,11 +90,13 @@ Explore IPM’s digital marketing and PR services including SEO, social media ma
 <section class="section">
   <h2>Web Development</h2>
   <div class="carousel">
-    <button class="btn prev">‹</button>
-    <div class="track">
-      <div class="slide website"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d"></div>
-      <div class="slide website"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"></div>
-      <div class="slide website"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"></div>
+    {% for post in works_page.websites.all %}
+        <button class="btn prev">‹</button>
+        <div class="track">
+            <a href="{{ site.website_url }}" target="_blank">
+                <img src="{{ site.preview_image.url }}">
+            </a>
+      {% endfor %}
     </div>
     <button class="btn next">›</button>
   </div>
@@ -100,3 +106,4 @@ Explore IPM’s digital marketing and PR services including SEO, social media ma
 
 
 {% endblock %}
+

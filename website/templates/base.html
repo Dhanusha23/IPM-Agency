@@ -17,11 +17,11 @@
   <!-- TOP SOCIAL BAR -->
   <div class="top-bar">
     <div class="top-left">
-      <span ><i class="fa-solid fa-phone"></i>+91 8891428924</span>
+      <span ><i class="fa-solid fa-phone"></i>+91 8589958924</span>
     </div>
 
     <div class="top-socials">
-      <a href="https://www.instagram.com/ipm_the_digital_djinn" target="_blank">
+      <a href="https://www.instagram.com/ipm_the_digital_djinn?igsh=MWt3eXlrMTk1NGl0eQ==" target="_blank">
         <i class="fa-brands fa-instagram"></i>
       </a>
       <a href="https://wa.me/9747563572" target="_blank">
@@ -52,6 +52,26 @@
 
   </ul>
 </nav>
+<div class="toggle" onclick="toggleTheme()">🌙</div>
+<script>
+if(localStorage.theme === "light"){
+  document.body.classList.add("light");
+  document.querySelector(".toggle").innerHTML = "☀";
+}
+
+function toggleTheme(){
+  document.body.classList.toggle("light");
+
+  if(document.body.classList.contains("light")){
+    localStorage.theme = "light";
+    document.querySelector(".toggle").innerHTML = "☀";
+  } else {
+    localStorage.theme = "dark";
+    document.querySelector(".toggle").innerHTML = "🌙";
+  }
+}
+</script>
+
 
 </header>
 
@@ -104,11 +124,11 @@
   </div>
 
   <div class="copyright-contact">
-    <a href="tel:+918891428924" class="phone">
-      <i class="fa-solid fa-phone"></i> +91 88914 28924
+    <a href="tel:+918589958924" class="phone">
+      <i class="fa-solid fa-phone"></i> +91 85899 58924
     </a>
 
-    <a href="https://www.instagram.com/ipm_the_digital_djinn" target="_blank" aria-label="Instagram">
+    <a href="https://www.instagram.com/ipm_the_digital_djinn?igsh=MWt3eXlrMTk1NGl0eQ==" target="_blank" aria-label="Instagram">
       <i class="fa-brands fa-instagram"></i>
     </a>
 

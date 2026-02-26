@@ -1,16 +1,23 @@
+document.querySelectorAll(".carousel").forEach(carousel => {
 
-function initMobileSlider() {
-  if (window.innerWidth > 768) return;
+  const track = carousel.querySelector(".track");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
 
-  document.querySelectorAll('.card').forEach(card => {
-    const slider = card.querySelector('.slider');
-    const left = card.querySelector('.arrow.left');
-    const right = card.querySelector('.arrow.right');
+  let position = 0;
 
-    right.onclick = () => slider.scrollLeft += slider.clientWidth;
-    left.onclick = () => slider.scrollLeft -= slider.clientWidth;
+  nextBtn.addEventListener("click", () => {
+    const slideWidth = track.querySelector(".slide").offsetWidth + 20;
+    position -= slideWidth;
+    track.style.transform = `translateX(${position}px)`;
+    
   });
-}
 
-initMobileSlider();
-window.addEventListener('resize', initMobileSlider);
+  prevBtn.addEventListener("click", () => {
+    const slideWidth = track.querySelector(".slide").offsetWidth + 20;
+    position += slideWidth;
+    if(position > 0) position = 0;
+    track.style.transform = `translateX(${position}px)`;
+  });
+
+});

@@ -1,190 +1,131 @@
-
-/* =======================
-   WORKS
-======================= */
-.works {
-  display: flex;
-  gap: 20px;
-  overflow: hidden;
-  padding: 20px;
-  flex-direction: column;
-  background:var(--black-primary);
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#000000;
+  color:#ffffff;
 }
 
-/* content */
-.work-large  {
-  display: block;
-  background:var(--black-primary);
-  color:var(--white-primary);
-  text-align: center;
-  padding: 30px;
-
-}
-.work-large p{
-  padding: 10px 60px 5px 60px;
-}
-.work-small {
-  display: none;
+/* HERO */
+.hero{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
 }
 
-/* Card */
-.works .card {
-  width: 100%;
-  min-height: 260px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #111;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  position: relative;
-  padding: 10px;
+.hero h1{
+  font-size:40px;
+  margin-bottom:15px;
 }
 
-/* Slider container */
-.slider {
-  display: flex;
-  width: fit-content;
-  animation: scroll 22s linear infinite;
-}
-.card:hover .slider {
-  animation-play-state: paused;
+.hero p{
+  font-size:18px;
+  opacity:0.8;
 }
 
-
-/* Images */
-.slider img {
-  width: clamp(180px, 60vw, 250px);
-  height: 300px;
-  object-fit: cover;
-  margin-right: 10px;
-  border-radius: 12px;
+/* SECTION */
+.section{
+  padding:60px 5%;
 }
 
-/* =======================
-   CARD 1 – INSTAGRAM POSTS (1:1)
-======================= */
-.works .card:nth-child(1) .slider img {
-  width: 240px;
-  border-radius: 0px;
-  padding-left: 10px;
-  aspect-ratio: 1 / 1;
+.section h2{
+  font-size:26px;
+  margin-bottom:25px;
 }
 
-/* =======================
-   CARD 2 – REELS (9:16)
-======================= */
-.works .card:nth-child(2) .slider img {
-  width: 200px;
-  border-radius: 0px;
-  aspect-ratio: 9 / 16;
+/* CAROUSEL */
+.carousel{
+  position:relative;
+  overflow:hidden;
 }
 
-/* =======================
-   WEBSITES – 16:9
-======================= */
-.website{
-  background: var(--black-primary);
-  color: var(--white-primary);
-  padding-bottom: 50px;
-}
-.website .card{
-  padding: 10px;
-  background: var(--glass-white);
-}
-.slider img {
-  width: 420px;
-  border-radius: 0px;
-  aspect-ratio: 16 / 9;
-  background: var(--black-primary);
-}
-.website h2 {
-  padding: 30px;
-  text-align: center;
-}
-.website p{
-  padding: 10px;
-  text-align: center;
+.track{
+  display:flex;
+  transition:transform 0.4s ease;
 }
 
-/* Animation */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.slide{
+  margin-right:20px;
 }
 
-/* hide arrows on desktop */
-.arrow {
-  display: none;
+/* LANDSCAPE */
+.landscape img{
+  width:320px;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* INSTAGRAM 1:1 */
+.square img{
+  width:250px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* REELS 9:16 */
+.vertical img{
+  width:200px;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* WEBSITE SMALL */
+.website img{
+  width:280px;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* BUTTONS */
+.btn{
+  position:absolute;
+  top:40%;
+  transform:translateY(-50%);
+  background:#000;
+  color:#fff;
+  border:none;
+  padding:10px 15px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.prev{ left:0; }
+.next{ right:0; }
+
+.btn:hover{
+  background:#444;
 }
 
 
 
 
-
-/* =======================
-   TABLET RESPONSIVE
-======================= */
-
-
-
-
-
-
-
-
-
-/* =======================
-   MOBILE RESPONSIVE
-======================= */
-@media (max-width: 768px) {
-
-  .work-large {
-    display: none;
-  }
-
-  .work-small {
-    display: block;
-  }
-    .work-small h2 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-
-  .work-small p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 90%;
-  }
-
-    .slider {
-    animation: none;           /*  stop auto scroll */
-    transform: translateX(0);  
-    width: 100%;
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-
-.arrow {
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.7);
-  color: #FFD700;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 5;
+/* TABLET */
+@media (max-width:1024px){
+    .hero h1{
+        font-size:30px;
+    }
 }
 
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
+/* MOBILE */
+@media (max-width:600px){
+    .hero{
+        padding:50px 15px;
+    }
 
+    .hero p{
+      font-size: 14px;
+    }
+
+    .hero h1{
+        font-size:24px;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
+    }
 }

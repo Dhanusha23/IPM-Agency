@@ -90,6 +90,19 @@
 
 
 
+
+
+
+@media  (max-width: 1024px){
+    .contact-info p {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+}
+
+
+
 @media (max-width: 768px){
      .contact {
     padding: 40px 10px;
@@ -111,7 +124,10 @@
   .contact-info p {
     text-align: center;
     line-height: 1.6;
+    font-size: 14px;
   }
+
+
 
   .map iframe {
     height: 220px;

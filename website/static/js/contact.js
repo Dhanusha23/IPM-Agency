@@ -15,3 +15,9 @@ function sendToWhatsapp() {
 
     window.open(url, '_blank').focus();
 }
+
+
+function toggleTheme(){
+  document.body.classList.toggle("light");
+}
+
